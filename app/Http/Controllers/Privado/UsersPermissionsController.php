@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Privado;
 
-use App\Http\Controllers\Controller;
-use App\User;
+use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class UsersPermissionsController extends Controller
 {

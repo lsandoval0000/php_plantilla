@@ -177,5 +177,8 @@ return [
         'time'                  => 'hora',
         'subject'               => 'asunto',
         'message'               => 'mensaje',
+        'dni'                   => 'DNI',
+        'app_name'                   => 'Nombre de aplicativo',
+        'app_sigla'                   => 'Sigla',
     ],
 ];

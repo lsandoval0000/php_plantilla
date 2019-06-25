@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers\Privado;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\InsertUserRequest;
-use App\Http\Requests\UpdateUserRequest;
-use App\User;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
-use Spatie\Permission\Models\Permission;
+use App\Http\Requests\UserRequest;
 use Spatie\Permission\Models\Role;
+use App\Http\Controllers\Controller;
+use Spatie\Permission\Models\Permission;
 
 class UsuariosController extends Controller
 {
@@ -69,7 +68,7 @@ class UsuariosController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(InsertUserRequest $request)
+    public function store(UserRequest $request)
     {
         $this->authorize('create',new User);
 
@@ -119,7 +118,7 @@ class UsuariosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateUserRequest $request, User $usuario)
+    public function update(UserRequest $request, User $usuario)
     {
         $this->authorize('update',$usuario);
 
